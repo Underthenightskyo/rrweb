@@ -1,14 +1,14 @@
 /**
  * @jest-environment jsdom
  */
-import { NodeType as RRNodeType } from 'rrweb-snapshot';
+import { value NodeType as RRNodeType } from '@juice10/rrweb-snapshot';
 import {
-  BaseRRDocumentImpl,
-  BaseRRDocumentTypeImpl,
-  BaseRRElementImpl,
-  BaseRRMediaElementImpl,
-  BaseRRNode,
-  IRRDocumentType,
+  value BaseRRDocumentImpl,
+  value BaseRRDocumentTypeImpl,
+  value BaseRRElementImpl,
+  value BaseRRMediaElementImpl,
+  value BaseRRNode,
+  value IRRDocumentType,
 } from '../src/document';
 
 describe('Basic RRDocument implementation', () => {
@@ -424,7 +424,7 @@ describe('Basic RRDocument implementation', () => {
       expect(node.removeAttribute).toBeDefined();
       expect(node.attachShadow).toBeDefined();
       expect(node.dispatchEvent).toBeDefined();
-      expect(node.dispatchEvent(null as unknown as Event)).toBeTruthy();
+      expect(node.dispatchEvent((null as unknown) as Event)).toBeTruthy();
       expect(node.toString()).toEqual('DIV id="id" class="className" ');
     });
 

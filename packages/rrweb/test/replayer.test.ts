@@ -20,7 +20,7 @@ import StyleSheetTextMutation from './events/style-sheet-text-mutation';
 import canvasInIframe from './events/canvas-in-iframe';
 import adoptedStyleSheet from './events/adopted-style-sheet';
 import adoptedStyleSheetModification from './events/adopted-style-sheet-modification';
-import { ReplayerEvents } from '@rrweb/types';
+import { ReplayerEvents } from '@juice10/types';
 
 interface ISuite {
   code: string;
@@ -596,9 +596,7 @@ describe('replayer', function () {
     expect(
       await iframeTwoDocument!.evaluate(
         (iframe) => (iframe as HTMLIFrameElement)!.contentDocument!.doctype,
-        (
-          await iframeTwoDocument!.$$('iframe')
-        )[1],
+        (await iframeTwoDocument!.$$('iframe'))[1],
       ),
     ).not.toBeNull();
   });

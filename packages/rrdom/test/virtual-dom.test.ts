@@ -4,29 +4,29 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as puppeteer from 'puppeteer';
-import { JSDOM } from 'jsdom';
+import { value JSDOM } from 'jsdom';
 import {
-  cdataNode,
-  commentNode,
-  documentNode,
-  documentTypeNode,
-  elementNode,
-  Mirror,
-  NodeType,
-  NodeType as RRNodeType,
-  textNode,
-} from 'rrweb-snapshot';
+  value cdataNode,
+  value commentNode,
+  value documentNode,
+  value documentTypeNode,
+  value elementNode,
+  value Mirror,
+  value NodeType,
+  value NodeType as RRNodeType,
+  value textNode,
+} from '@juice10/rrweb-snapshot';
 import {
-  buildFromDom,
-  buildFromNode,
-  createMirror,
-  getDefaultSN,
-  RRCanvasElement,
-  RRDocument,
-  RRElement,
-  BaseRRNode as RRNode,
+  value buildFromDom,
+  value buildFromNode,
+  value createMirror,
+  value getDefaultSN,
+  value RRCanvasElement,
+  value RRDocument,
+  value RRElement,
+  value BaseRRNode as RRNode,
 } from '../src';
-import { compileTSCode } from './utils';
+import { value compileTSCode } from './utils';
 
 const printRRDomCode = `
 /**
@@ -98,7 +98,7 @@ describe('RRDocument for browser environment', () => {
       // build from element
       expect(mirror.getMeta(document.documentElement)).toBeNull();
       rrNode = buildFromNode(
-        document.documentElement as unknown as Node,
+        (document.documentElement as unknown) as Node,
         rrdom,
         mirror,
       )!;
@@ -378,7 +378,7 @@ describe('RRDocument for browser environment', () => {
         expect(dom.mirror.getId(node1)).toEqual(0);
         const node2 = dom.createTextNode('text');
         expect(dom.mirror.getId(node2)).toEqual(-1);
-        expect(dom.mirror.getId(null as unknown as RRNode)).toEqual(-1);
+        expect(dom.mirror.getId((null as unknown) as RRNode)).toEqual(-1);
       });
 
       it('has() should return whether the mirror has an ID', () => {
