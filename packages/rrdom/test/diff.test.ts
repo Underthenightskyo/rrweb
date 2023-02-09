@@ -4,35 +4,35 @@
 import * as path from 'path';
 import * as puppeteer from 'puppeteer';
 import {
-  value NodeType as RRNodeType,
-  value serializedNodeWithId,
-  value createMirror,
-  value Mirror as NodeMirror,
+  NodeType as RRNodeType,
+  serializedNodeWithId,
+  createMirror,
+  Mirror as NodeMirror,
 } from '@juice10/rrweb-snapshot';
 import {
-  value buildFromDom,
-  value getDefaultSN,
-  value Mirror as RRNodeMirror,
-  value RRDocument,
-  value RRMediaElement,
+  buildFromDom,
+  getDefaultSN,
+  Mirror as RRNodeMirror,
+  RRDocument,
+  RRMediaElement,
 } from '../src';
 import {
-  value createOrGetNode,
-  value diff,
-  value ReplayerHandler,
-  value nodeMatching,
-  value sameNodeType,
+  createOrGetNode,
+  diff,
+  ReplayerHandler,
+  nodeMatching,
+  sameNodeType,
 } from '../src/diff';
-import type { value IRRElement, value IRRNode } from '../src/document';
-import { value Replayer } from '@juice10/rrweb';
+import type { IRRElement, IRRNode } from '../src/document';
+import { Replayer } from '@juice10/rrweb';
 import type {
-  value eventWithTime,
-  value canvasMutationData,
-  value styleDeclarationData,
-  value styleSheetRuleData,
+  eventWithTime,
+  canvasMutationData,
+  styleDeclarationData,
+  styleSheetRuleData,
 } from '@juice10/types';
-import { value EventType, value IncrementalSource } from '@juice10/types';
-import { value compileTSCode } from './utils';
+import { EventType, IncrementalSource } from '@juice10/types';
+import { compileTSCode } from './utils';
 
 const elementSn = {
   type: RRNodeType.Element,

@@ -1,14 +1,14 @@
 /**
  * @jest-environment jsdom
  */
-import { value NodeType as RRNodeType } from '@juice10/rrweb-snapshot';
+import { NodeType as RRNodeType } from '@juice10/rrweb-snapshot';
 import {
-  value BaseRRDocumentImpl,
-  value BaseRRDocumentTypeImpl,
-  value BaseRRElementImpl,
-  value BaseRRMediaElementImpl,
-  value BaseRRNode,
-  value IRRDocumentType,
+  BaseRRDocumentImpl,
+  BaseRRDocumentTypeImpl,
+  BaseRRElementImpl,
+  BaseRRMediaElementImpl,
+  BaseRRNode,
+  IRRDocumentType,
 } from '../src/document';
 
 describe('Basic RRDocument implementation', () => {

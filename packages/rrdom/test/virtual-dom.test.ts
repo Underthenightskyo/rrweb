@@ -4,29 +4,29 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as puppeteer from 'puppeteer';
-import { value JSDOM } from 'jsdom';
+import { JSDOM } from 'jsdom';
 import {
-  value cdataNode,
-  value commentNode,
-  value documentNode,
-  value documentTypeNode,
-  value elementNode,
-  value Mirror,
-  value NodeType,
-  value NodeType as RRNodeType,
-  value textNode,
+  cdataNode,
+  commentNode,
+  documentNode,
+  documentTypeNode,
+  elementNode,
+  Mirror,
+  NodeType,
+  NodeType as RRNodeType,
+  textNode,
 } from '@juice10/rrweb-snapshot';
 import {
-  value buildFromDom,
-  value buildFromNode,
-  value createMirror,
-  value getDefaultSN,
-  value RRCanvasElement,
-  value RRDocument,
-  value RRElement,
-  value BaseRRNode as RRNode,
+  buildFromDom,
+  buildFromNode,
+  createMirror,
+  getDefaultSN,
+  RRCanvasElement,
+  RRDocument,
+  RRElement,
+  BaseRRNode as RRNode,
 } from '../src';
-import { value compileTSCode } from './utils';
+import { compileTSCode } from './utils';
 
 const printRRDomCode = `
 /**

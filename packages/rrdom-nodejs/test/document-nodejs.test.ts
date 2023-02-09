@@ -3,20 +3,20 @@
  */
 import * as fs from 'fs';
 import * as path from 'path';
-import { value NodeType as RRNodeType } from '@juice10/rrweb-snapshot';
+import { NodeType as RRNodeType } from '@juice10/rrweb-snapshot';
 import {
-  value RRCanvasElement,
-  value RRCDATASection,
-  value RRComment,
-  value RRDocument,
-  value RRElement,
-  value RRIFrameElement,
-  value RRImageElement,
-  value RRMediaElement,
-  value RRStyleElement,
-  value RRText,
+  RRCanvasElement,
+  RRCDATASection,
+  RRComment,
+  RRDocument,
+  RRElement,
+  RRIFrameElement,
+  RRImageElement,
+  RRMediaElement,
+  RRStyleElement,
+  RRText,
 } from '../src/document-nodejs';
-import { value buildFromDom } from '@juice10/rrdom';
+import { buildFromDom } from '@juice10/rrdom';
 
 describe('RRDocument for nodejs environment', () => {
   describe('RRDocument API', () => {
