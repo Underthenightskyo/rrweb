@@ -13,7 +13,7 @@ export enum EventType {
   Meta,
   Custom,
   Plugin,
-  RemoveMeType
+  RemoveMeType,
 }
 
 export type domContentLoadedEvent = {
